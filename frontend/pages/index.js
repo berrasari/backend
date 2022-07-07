@@ -10,7 +10,7 @@ function Home({posts}) {
             <h3>Author : {post.attributes.author}</h3>
             <div>Content : {post.attributes.content}</div>
           </div>
-        ))}
+        ))};
 				
 			  
 
