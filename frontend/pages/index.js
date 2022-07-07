@@ -21,7 +21,7 @@ function Home({posts}) {
 }
 
 export async function getServerSideProps() {
-	const request = await fetch(`http://localhost:1337/api/posts/`);
+	const request = await fetch(`https://damp-scrubland-34325.herokuapp.com/api/posts/`);
 	const posts = await request.json();
 	return {
 		props: {
