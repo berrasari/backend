@@ -5,7 +5,7 @@ function Home({posts}) {
 			
 				<h1>Recent Posts</h1>
         {posts.data.map(post =>(
-          <div>
+          <div key={posts.id}>
             <h2>Title : {post.attributes.title}</h2>
             <h3>Author : {post.attributes.author}</h3>
             <div>Content : {post.attributes.content}</div>
