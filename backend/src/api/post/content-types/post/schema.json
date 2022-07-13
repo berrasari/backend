@@ -4,8 +4,7 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "post",
-    "description": ""
+    "displayName": "post"
   },
   "options": {
     "draftAndPublish": true
@@ -24,16 +23,6 @@
     },
     "content": {
       "type": "richtext"
-    },
-    "Media": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }
