@@ -6,4 +6,15 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::post.post');
+module.exports = createCoreController('api::post.post',({strapi})=>({
+    async findOne(ctx){
+        const{slug} =ctx.params;
+
+        const entity = await strapi.db.query('api::post.post').findOne({
+            where:{slug}
+        });
+        const sanitizedEntitiy = await this.sanitizeOutput(entity);
+        return this.transformResponse(sanitizedEntitiy)
+    }
+}));
+
